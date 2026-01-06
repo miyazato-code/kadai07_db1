@@ -1,0 +1,21 @@
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- IDE/Editor ---
+.vscode/
+
+# --- Security & Config ---
+# !機密情報 環境変数
+config/
+
+# --- Application ---
+# Apacheの制御ファイル
+www/codydex/.htaccess
+
+# --- Logs & Temp ---
+*.log
+
+# --- Database & Migration ---
+/__sql__/
+/__test__/

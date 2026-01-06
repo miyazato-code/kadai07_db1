@@ -1,0 +1,76 @@
+/*                  _         ____               */
+/*   ___  ___    __| | _   _ |  _ \   ___ __  __ */
+/*  / __|/ _ \  / _` || | | || | | | / _ \\ \/ / */
+/* | (__| (_) || (_| || |_| || |_| ||  __/ >  <  */
+/*  \___|\___/  \__,_| \__, ||____/  \___|/_/\_\ */
+/*                     |___/                     */
+
+/* ------------------------------------------------------------
+  Variables & Theme
+------------------------------------------------------------ */
+:root {
+    --color-bg: #0d1117;
+    --color-card: #161b22;
+    --color-border: #30363d;
+    --color-accent: #2f81f7;
+    --color-danger: #f85149;
+    --color-text-main: #e6edf3;
+    --color-text-sub: #8b949e;
+
+    --lang-default: #8b949e;
+    --color-html: #e34c26;
+    /* オレンジ */
+    --color-css: #264de4;
+    /* ブルー */
+    --color-js: #f7df1e;
+    /* イエロー */
+    --color-php: #777bb4;
+    /* パープル */
+    --color-py: #3776ab;
+    /* ブルー */
+    --color-ts: #3178c6;
+    /* 濃いブルー */
+
+    --grid-max-width: 800px;
+
+    --glass-bg: rgba(13, 17, 23, 0.85);
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xlg: 20px;
+    --radius-xxlg: 24px;
+    --radius-xxxlg: 28px;
+    --radius-xxxxlg: 32px;
+    --radius-full: 9999px;
+    --radius-none: 0px;
+    --font-mono: 'SF Mono', 'Fira Code', 'Menlo', 'Consolas', monospace;
+
+
+}
+
+/* ------------------------------------------------------------
+  Layout (Grid System)
+  中央に集中させる12カラム・レイアウト
+------------------------------------------------------------ */
+.l-container {
+    display: grid;
+    /* サイドの余白を fr で確保し、中央を最大1000pxに制御 */
+    grid-template-columns: 1fr minmax(auto, var(--grid-max-width)) 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+}
+
+/* 各セクションを中央のカラム（grid-column: 2）に配置 */
+.c-tabs,
+.c-list,
+.c-search {
+    grid-column: 2;
+}
+
+/* 全幅が必要な場合の修飾子 */
+.col-12 {
+    grid-column: 1 / -1;
+}
